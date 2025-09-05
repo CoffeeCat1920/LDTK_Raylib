@@ -1,3 +1,4 @@
+#include "include/core/settings.hpp"
 #include "raylib/raylib.h"
 #include "core/colors.hpp"
 
@@ -5,7 +6,7 @@
 
 int main () {
   
-  InitWindow( 64*5 , 64*5, "Animation Test");
+  InitWindow( RENDERING_WIDTH, RENDERING_HEIGHT, "LDtk + Raylib");
   Game game;
 
   while ( !WindowShouldClose() )
