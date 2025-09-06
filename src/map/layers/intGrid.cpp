@@ -1,8 +1,17 @@
 #include "./intGrid.hpp"
 #include "raylib/raylib.h"
 #include "core/settings.hpp"
+#include <filesystem>
+#include <string>
+#include <utility>
 
-IntGrid::Layer::Layer() {
+IntGrid::Layer::Layer(std::string id, uint8_t width, uint8_t height, 
+    std::filesystem::path tileSetRelPath, std::vector<uint32_t>& intGridCsv) :
+  id(id),
+  width(width),
+  height(height),
+  intGridCsv(std::move(intGridCsv))
+{
   this->tileSetTexture = LoadTexture(tileSetRelPath.c_str());
 }
 

@@ -68,7 +68,6 @@
 			"uiFilterTags": [],
 			"useAsyncRender": false,
 			"intGridValues": [
-				{ "value": 3, "identifier": "door", "color": "#D77643", "tile": { "tilesetUid": 3, "x": 32, "y": 0, "w": 16, "h": 16 }, "groupUid": 1 },
 				{ "value": 1, "identifier": "Wall", "color": "#8B9BB4", "tile": { "tilesetUid": 3, "x": 16, "y": 0, "w": 16, "h": 16 }, "groupUid": 1 },
 				{ "value": 2, "identifier": "Floor", "color": "#BE4A2F", "tile": { "tilesetUid": 3, "x": 0, "y": 0, "w": 16, "h": 16 }, "groupUid": 0 }
 			],

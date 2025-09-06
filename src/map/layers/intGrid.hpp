@@ -1,27 +1,24 @@
 #pragma once
 
 #include "raylib/raylib.h"
+#include "map/definations/definations.hpp"
 #include <cstdint>
 #include <filesystem>
-#include <map>
-#include <string>
+#include <sys/types.h>
 #include <vector>
 
 namespace IntGrid {
 
-struct LayerDef {
-  std::string identifier;
-  std::map<uint64_t, Rectangle> intGridValues;
-};
-
 struct Layer {
-  uint8_t width, height, offSetX, offSetY;
-  std::filesystem::path tileSetRelPath;
+  std::string id;
+  uint8_t width, height;
   std::vector<uint32_t> intGridCsv;
   Texture2D tileSetTexture;
-  Layer(); 
+
+  Layer(std::string id, uint8_t width, uint8_t height, 
+      std::filesystem::path tileSetRelPath, std::vector<uint32_t>& intGridCsv); 
 };
 
 void Draw(LayerDef layerDef, Layer layer);
-
+  
 };

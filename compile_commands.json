@@ -12,9 +12,43 @@
       "bin/src/game/game.o",
       "src/game/game.cpp"
     ],
-    "directory": "/home/ok/Code/raylib-templeat",
-    "file": "/home/ok/Code/raylib-templeat/src/game/game.cpp",
-    "output": "/home/ok/Code/raylib-templeat/bin/src/game/game.o"
+    "directory": "/home/ok/Code/LDTK_Raylib",
+    "file": "/home/ok/Code/LDTK_Raylib/src/game/game.cpp",
+    "output": "/home/ok/Code/LDTK_Raylib/bin/src/game/game.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Iinclude",
+      "-Isrc",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "bin/src/map/layers/intGrid.o",
+      "src/map/layers/intGrid.cpp"
+    ],
+    "directory": "/home/ok/Code/LDTK_Raylib",
+    "file": "/home/ok/Code/LDTK_Raylib/src/map/layers/intGrid.cpp",
+    "output": "/home/ok/Code/LDTK_Raylib/bin/src/map/layers/intGrid.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-Iinclude",
+      "-Isrc",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "bin/src/map/map.o",
+      "src/map/map.cpp"
+    ],
+    "directory": "/home/ok/Code/LDTK_Raylib",
+    "file": "/home/ok/Code/LDTK_Raylib/src/map/map.cpp",
+    "output": "/home/ok/Code/LDTK_Raylib/bin/src/map/map.o"
   },
   {
     "arguments": [
@@ -29,8 +63,8 @@
       "bin/main.o",
       "main.cpp"
     ],
-    "directory": "/home/ok/Code/raylib-templeat",
-    "file": "/home/ok/Code/raylib-templeat/main.cpp",
-    "output": "/home/ok/Code/raylib-templeat/bin/main.o"
+    "directory": "/home/ok/Code/LDTK_Raylib",
+    "file": "/home/ok/Code/LDTK_Raylib/main.cpp",
+    "output": "/home/ok/Code/LDTK_Raylib/bin/main.o"
   }
 ]
