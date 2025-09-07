@@ -27,7 +27,8 @@ private:
   void ParseIntGridInstances(const json& levels);
 
 public:
-  Level(const json& root);  
-
+  Level();  
+  
+  void Init(const json& root);
   void Draw();
 };

@@ -11,7 +11,9 @@
 #include <sys/types.h>
 #include <vector>
 
-Level::Level(const json& root) {
+Level::Level() {}
+
+void Level::Init(const json& root) {
   if (root.contains("defs") && !root["defs"].empty()) {
     ParseIntGridDefs(root["defs"]);
   } else if (root.contains("levels") && !root["levels"].empty()) {
