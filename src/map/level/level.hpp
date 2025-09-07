@@ -23,10 +23,11 @@ private:
   std::map<std::string, IntGrid::Layer> intGridInstances;
   std::map<std::string, std::vector<Neighbour>> neighbours;
 
-  void parseIntGridDefs(const json& defs);
-  void parseIntGridInstances(const json& levels);
+  void ParseIntGridDefs(const json& defs);
+  void ParseIntGridInstances(const json& levels);
+
 public:
-  Level(const json& levelData);  
+  Level(const json& root);  
 
   void Draw();
 };

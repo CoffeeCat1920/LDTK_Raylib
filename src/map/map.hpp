@@ -4,4 +4,6 @@ class Map {
 
 private:
 
+public:
+
 }; 
