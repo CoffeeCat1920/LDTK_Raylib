@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <filesystem>
 #include <map>
+#include <memory>
 #include <string>
 #include <sys/types.h>
 #include <vector>
@@ -74,9 +75,9 @@ void Level::ParseIntGridInstances(const json& levels) {
           uint8_t height = layerInstance["__cHei"];
           std::filesystem::path tileSetRelPath = layerInstance["__tilesetRelPath"];
           std::vector<uint32_t> intGridCsv = layerInstance["intGridCsv"].get<std::vector<uint32_t>>();
-          IntGrid::Layer layer(id, layerDefId, width, height, tileSetRelPath, intGridCsv);
 
-          intGridInstances[id] = layer;
+          intGridInstances[id] = std::make_shared<IntGrid::Layer>(id, layerDefId, width, 
+              height, tileSetRelPath, intGridCsv);
         }
 
       }

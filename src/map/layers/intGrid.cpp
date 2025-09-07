@@ -4,7 +4,6 @@
 #include <cstdint>
 #include <filesystem>
 #include <string>
-#include <utility>
 
 IntGrid::Layer::Layer(std::string id, uint32_t layerDefId, uint8_t width, uint8_t height, 
     std::filesystem::path tileSetRelPath, std::vector<uint32_t>& intGridCsv) :
@@ -12,7 +11,7 @@ IntGrid::Layer::Layer(std::string id, uint32_t layerDefId, uint8_t width, uint8_
   layerDefId(layerDefId),
   width(width),
   height(height),
-  intGridCsv(std::move(intGridCsv))
+  intGridCsv(intGridCsv)
 {
   this->tileSetTexture = LoadTexture(tileSetRelPath.c_str());
 }
