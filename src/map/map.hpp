@@ -18,4 +18,5 @@ public:
   Map(std::filesystem::path jsonRootPath);
 
   void Init();
+  void Draw();
 }; 

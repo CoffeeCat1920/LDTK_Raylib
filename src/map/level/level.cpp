@@ -18,9 +18,7 @@ void Level::Init(const json& root) {
   if (root.contains("defs") && !root["defs"].empty()) {
     ParseIntGridDefs(root["defs"]);
   } else if (root.contains("levels") && !root["levels"].empty()) {
-    const auto& levels = root["levels"]; 
-    id = levels["iid"].get<std::string>();
-    ParseIntGridInstances(levels);
+    ParseIntGridInstances(root["levels"]);
   }
 }
 
@@ -84,4 +82,11 @@ void Level::ParseIntGridInstances(const json& levels) {
     }
   }
 
+} 
+
+void Level::Draw() {
+  for (auto& intGridInstance: intGridInstances) {
+    std::shared_ptr<IntGrid::Layer> layer = intGridInstance.second;
+    IntGrid::Draw(intGridDefs[layer->layerDefId], *layer);
+  }
 } 

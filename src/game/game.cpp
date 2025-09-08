@@ -5,6 +5,11 @@ Game::Game() :
   map("./assets/tileMap/test.json")
 {} 
 
-void Game::Init() {}
+void Game::Init() {
+  map.Init();
+}
 void Game::Update() {}
-void Game::Draw() {}
+
+void Game::Draw() {
+  map.Draw();
+}

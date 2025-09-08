@@ -9,6 +9,8 @@ int main () {
   InitWindow( RENDERING_WIDTH, RENDERING_HEIGHT, "LDtk + Raylib");
   Game game;
 
+  game.Init();
+
   while ( !WindowShouldClose() )
   { 
 

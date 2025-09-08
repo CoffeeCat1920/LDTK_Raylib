@@ -19,3 +19,7 @@ Map::Map(std::filesystem::path jsonRootPath) :
 void Map::Init() {
   level.Init(jsonRootData); 
 }
+
+void Map::Draw() {
+  level.Draw();
+}
