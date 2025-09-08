@@ -1,7 +1,7 @@
 #include "game.hpp"
-#include "map/map.hpp"
+#include "ldtk_loader/map.hpp"
 
-Game::Game() :
+Game::Game() : 
   map("./assets/tileMap/test.json")
 {} 
 

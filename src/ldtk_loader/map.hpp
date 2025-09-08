@@ -1,22 +1,23 @@
 #pragma once
 
-#include "map/level/level.hpp"
 #include "nlohmann/json_utils.hpp"
 #include <filesystem>
+#include <string>
 
 class Map {
   
 private:
   std::filesystem::path jsonRootPath;
-  json jsonRootData; 
-  Level level;
-  
-  void LoadJson(); 
+  json jsonRootData;
+
+  std::string iid;
+
+  void LoadJson();
 
 public:
 
   Map(std::filesystem::path jsonRootPath);
-
+  
   void Init();
   void Draw();
-}; 
+};
