@@ -1,5 +1,6 @@
 #pragma once 
 
+#include "ldtk_loader/def/layer/layer.hpp"
 #include "nlohmann/json_utils.hpp"
 #include "raylib/raylib.h"
 #include <cstdint>
@@ -17,15 +18,17 @@ enum IntGridValueGroup {
   UNGROUPED
 };
 
-class IntGridLayerDef {
-private:
+class IntGridLayerDef  {
 
-  json layerData;
+private:
+  json layersData;
 
   std::map<uint32_t, IntGridTile> intGridValues;
-  std::map<uint32_t, IntGridValueGroup> IntGridValueGroups;
+  std::map<uint32_t, IntGridValueGroup> intGridValuesGroups;
+
+  void ParseIntGridValues();
+  void ParseValuesGroup();
   
 public:
-
-  IntGridLayerDef(json layerData);
+  IntGridLayerDef(json layersData);
 };

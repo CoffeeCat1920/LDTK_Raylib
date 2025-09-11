@@ -4,10 +4,11 @@
 
 
 Map::Map(std::filesystem::path jsonRootPath) :
-  jsonRootPath(jsonRootPath) {
-    LoadJson();
-    iid = jsonRootData["iid"];
-  }
+  jsonRootPath(jsonRootPath) 
+{
+  LoadJson();
+  iid = jsonRootData["iid"];
+}
 
 void Map::LoadJson() {
   std::ifstream file(jsonRootPath);

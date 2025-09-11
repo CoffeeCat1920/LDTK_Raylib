@@ -26,12 +26,12 @@
       "-Wextra",
       "-c",
       "-o",
-      "bin/src/map/layers/intGrid.o",
-      "src/map/layers/intGrid.cpp"
+      "bin/src/ldtk_loader/map.o",
+      "src/ldtk_loader/map.cpp"
     ],
     "directory": "/home/ok/Code/LDTK_Raylib",
-    "file": "/home/ok/Code/LDTK_Raylib/src/map/layers/intGrid.cpp",
-    "output": "/home/ok/Code/LDTK_Raylib/bin/src/map/layers/intGrid.o"
+    "file": "/home/ok/Code/LDTK_Raylib/src/ldtk_loader/map.cpp",
+    "output": "/home/ok/Code/LDTK_Raylib/bin/src/ldtk_loader/map.o"
   },
   {
     "arguments": [
@@ -43,12 +43,12 @@
       "-Wextra",
       "-c",
       "-o",
-      "bin/src/map/map.o",
-      "src/map/map.cpp"
+      "bin/src/ldtk_loader/def/layer/intGrid.o",
+      "src/ldtk_loader/def/layer/intGrid.cpp"
     ],
     "directory": "/home/ok/Code/LDTK_Raylib",
-    "file": "/home/ok/Code/LDTK_Raylib/src/map/map.cpp",
-    "output": "/home/ok/Code/LDTK_Raylib/bin/src/map/map.o"
+    "file": "/home/ok/Code/LDTK_Raylib/src/ldtk_loader/def/layer/intGrid.cpp",
+    "output": "/home/ok/Code/LDTK_Raylib/bin/src/ldtk_loader/def/layer/intGrid.o"
   },
   {
     "arguments": [
