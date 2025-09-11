@@ -6,6 +6,7 @@
 IntGridLayerDef::IntGridLayerDef(json layersData) :
   layersData(layersData){
   ParseIntGridValues();  
+  ParseIntGridValuesGroup();
 }
 
 void IntGridLayerDef::ParseIntGridValues() {
@@ -15,13 +16,13 @@ void IntGridLayerDef::ParseIntGridValues() {
       IntGridTile tile; 
       if (intGridValue.contains("tile")) {
         auto const& tileData = intGridValue["tile"]; 
-        tile.tileSetUid = tileData["tileSetUid"];
-        tile.groupUid = tileData["groupUid"];
+        tile.tileSetUid = tileData["tilesetUid"];
+        tile.groupUid = intGridValue["groupUid"];
         Rectangle rec {
-          tileData["x"],
-          tileData["y"],
-          tileData["w"],
-          tileData["h"]
+          tileData["x"].get<float>(),
+          tileData["y"].get<float>(),
+          tileData["w"].get<float>(),
+          tileData["h"].get<float>()
         };
         tile.rec = rec;
       }
@@ -30,7 +31,7 @@ void IntGridLayerDef::ParseIntGridValues() {
   }
 } 
 
-void IntGridLayerDef::ParseValuesGroup() {
+void IntGridLayerDef::ParseIntGridValuesGroup() {
   if (layersData.contains("intGridValuesGroups") && !layersData["intGridValuesGroups"].empty()) {
     for (auto const& intGridValuesGroup : layersData["intGridValuesGroups"]) {
       uint32_t uid = intGridValuesGroup["uid"]; 

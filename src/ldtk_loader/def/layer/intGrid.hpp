@@ -1,6 +1,5 @@
 #pragma once 
 
-#include "ldtk_loader/def/layer/layer.hpp"
 #include "nlohmann/json_utils.hpp"
 #include "raylib/raylib.h"
 #include <cstdint>
@@ -27,8 +26,9 @@ private:
   std::map<uint32_t, IntGridValueGroup> intGridValuesGroups;
 
   void ParseIntGridValues();
-  void ParseValuesGroup();
+  void ParseIntGridValuesGroup();
   
 public:
   IntGridLayerDef(json layersData);
+
 };

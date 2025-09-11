@@ -9,6 +9,8 @@ int main () {
   InitWindow( RENDERING_WIDTH, RENDERING_HEIGHT, "LDtk + Raylib");
   Game game;
 
+  SetTargetFPS(60);
+
   game.Init();
 
   while ( !WindowShouldClose() )
